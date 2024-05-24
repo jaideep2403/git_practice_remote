@@ -1,0 +1,13 @@
+   58  mkdir -p ~/nginx_html
+   59  echo "Hello, World!" > ~/nginx_html/index.html
+   60  sudo docker run --name mynginx -v ~/nginx_html:/usr/share/nginx/html:ro -p 80:80 -d nginx
+   61  docker ps
+   62  docker stop 643
+   63  docker stop 443
+   64  sudo docker run --name mynginx -v ~/nginx_html:/usr/share/nginx/html:ro -p 80:80 -d nginx
+   65  docker ps
+   66  docker ps -a
+   67  docker stop 78a 443
+   68  docker rm 78a 443
+   69  sudo docker run --name mynginx -v ~/nginx_html:/usr/share/nginx/html:ro -p 80:80 -d nginx
+   70  docker ps
